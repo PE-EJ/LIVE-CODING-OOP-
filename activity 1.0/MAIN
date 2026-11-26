@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package javaapplication41;
+
+/**
+ *
+ * @author MABIDA_CPE113
+ */
+public class JavaApplication41 {
+
+    
+    public static void main(String[] args) {
+
+        newclass pointA = new newclass(3, 4);
+        newclass pointB = new newclass(9, 12);
+        newclass pointC = new newclass(9, 20);
+
+        double distanceAB = pointA.calculateDistance(pointB);
+        double slopeAB = pointA.calculateSlope(pointB);
+
+        double distanceBC = pointB.calculateDistance(pointC);
+        String newclassBC;
+        try {
+            newclassBC = String.format("%.2f", pointB.calculateSlope(pointC));
+        } catch (ArithmeticException e) {
+            newclassBC = e.getMessage();
+        }
+        System.out.println("==== ENGINEERING DISTANCE AND SLOPE ANALYZER====");
+        System.out.printf("Point A: (%.2f, %.2f)%n", pointA.getX(), pointA.getY());
+        System.out.printf("Point B: (%.2f, %.2f)%n\n", pointB.getX(), pointB.getY());
+        System.out.printf("Distance: %.2f units%n", distanceAB);
+        System.out.printf("Slope: %.2f%n", slopeAB);
+
+    }
+}
